@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Users</title>
+
+    <style>
+        .tb {
+            border: 3px solid rgb(33, 18, 18);
+            border-radius: 12px;
+            height: 100%;
+            padding: 10px 20px 10px 20px;
+            margin-left: 10rem;
+            padding: 20px 30px 20px 30px;
+            
+            
+        }
+
+        .btn {
+            padding: 8px 16px 8px 16px;
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: blueviolet;
+            color: white;
+            cursor: pointer;
+        }
+
+
+        .tableBorder {
+            border: 1px solid black;
+            padding: 10px 20px 10px 20px;
+            border-radius: 5px;
+            font-family: sans-serif;
+            background-color: rgb(0, 75, 125);
+            color: white;
+        }
+
+        .th{
+            padding-bottom: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table class="tb" style="font-family: sans-serif;">
+
+        <h1 style="display: flex ; justify-content: center; font-family: sans-serif;">OUR USERS</h1>
+
+        <tr>
+            <th class="th">Id</th>
+            <th class="th">Email</th>
+            <th class="th">UserName</th>
+        </tr>
+
+        <% for(user of result){ %>
+            <tr>
+                <td class="tableBorder">
+                    <%=user.username%>
+                </td>
+                <td class="tableBorder">
+                    <%=user.email%>
+                </td>
+                <td class="tableBorder">
+                    <%=user.id%>
+                </td>
+
+                <td class="tableBorder">
+                    <form action="/user/<%= user.id %>/edit" method="GET">
+                        <button class="btn">Edit</button>
+                    </form>
+                </td>
+                <td class="tableBorder">
+                    <form action="/user/<%= user.id %>/delete" method="GET">
+                        <button class="btn">Delte user</button>
+                    </form>
+                </td>
+            </tr>
+            <%}%>
+    </table>
+
+</body>
+
+</html>

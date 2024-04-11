@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add User</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* text-align: center; */
+            /* justify-content: center; */
+            margin-top: 10%;
+            font-family: sans-serif;
+        }
+
+        .input {
+            padding: 10px 30px 10px 30px;
+            border: 2px solid black;
+            border-radius: 8px;
+        }
+
+        .btn {
+            padding: 8px 16px 8px 16px;
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: blueviolet;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="POST" action="/user">
+
+        <h1 style="color:  rgb(18, 128, 212);;">JOIN US</h1>
+        <h3>Enter Your Details</h3>
+        <br>
+
+        USERNAME <br> <br>
+        <input class="input" placeholder="Enter username" name="username"> <br> <br>
+        EMAIL <br> <br>
+        <input class="input" placeholder="Enter email" name="email"> <br> <br>
+        PASSWORD <br> <br>
+        <input class="input" placeholder="Enter password" name="password"></input><br>
+        <br> <br>
+        <button class="btn">Submit</button>
+    </form>
+
+</body>
+
+</html>

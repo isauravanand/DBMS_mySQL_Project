@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10rem;
+        }
+
+        .h2{
+            padding: 10px 30px 10px 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+            border-radius: 10px;
+            background-color: rgb(6, 104, 179);
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .join{
+            padding: 10px 20px 10px 20px;
+            border: 1px solid black;
+            border-radius: 5px;
+            background-color: blueviolet;
+            color: white;
+            cursor: pointer;
+        }
+        .users{
+            padding: 10px 20px 10px 20px;
+            border: 1px solid black;
+            border-radius: 5px;
+            background-color: blueviolet;
+            color: white;
+            cursor: pointer;
+        }
+
+        .count{
+            border: 2px solid black;
+            /* background-color: rgb(58, 54, 54); */
+            color: rgb(0, 0, 0);
+            padding: 10px 20px 10px 20px;
+            border-radius: 12px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            
+        }
+
+        .form{
+            display: flex; 
+        }
+    </style>
+</head>
+<body> 
+    <h1 class="h2">Login Form Like Facebook</h1>
+    <h2 class="count">The Total number of Users are <%= count %></h2>
+    <div class="form">
+
+        <form action="/user/new" method="get">
+            <button class="join">Join us</button>
+        </form> &nbsp; &nbsp;
+        <form action="/user" method="get">
+            <button class="users">Show Users</button>
+        </form>
+    </div>
+
+</body>
+</html>
